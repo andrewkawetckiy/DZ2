@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Звіт про виконані завдання</title>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+
+  <!-- Підключення згенерованого шрифту -->
+  <script src="assets/fonts/Roboto_Regular.typeface.json"></script> <!-- заміни ім'я, якщо інше -->
+</head>
+<body>
+  <h1>Звіт про виконані завдання</h1>
+  <h2>Студента групи Ім-24</h2>
+
+  <a-scene>
+    <!-- Сірий фон -->
+    <a-sky color="#808080"></a-sky>
+
+    <!-- Освітлення -->
+    <a-light type="ambient" color="#BBB"></a-light>
+    <a-light type="directional" position="0 1 1" intensity="0.8" color="#FFF"></a-light>
+
+    <!-- Тори -->
+    <a-torus position="0 2.262 -4.851" color="#FFD700" radius="1.2" radius-tubular="0.090" rotation="29.691 0 0" scale="1.884 1.228 1.100"></a-torus>
+    <a-torus position="0 1.982 -5" color="#FFA700" radius="1.2" radius-tubular="0.100" rotation="-38.104 0 0"></a-torus>
+    <a-torus position="-1.119 1.041 -5" color="#FFA500" radius="1.2" radius-tubular="0.150" rotation="55.609 90 90"></a-torus>
+    <a-torus position="1.262 1.666 -5" color="#008000" radius="1.2" radius-tubular="0.25" rotation="-59 90 0"></a-torus>
+
+    <!-- Платформа (фіолетова) -->
+    <a-box position="0 -1.5 -5" width="7" height="0.2" depth="7" color="#FF00FF"></a-box>
+
+    <!-- Вертикальні стрижні -->
+    <a-cylinder position="-0.5 -0.253 -5" radius="0.05" height="2" color="#0000FF" scale="1 1.2 1"></a-cylinder>
+    <a-cylinder position="0  -0.261 -5" radius="0.05" height="2" color="#FFFF00" scale="1 1.3 1"></a-cylinder>
+    <a-cylinder position="0.5 -0.276 -5" radius="0.05" height="2" color="#FF00FF" scale="1 1.2 1"></a-cylinder>
+
+    <!-- СТАРИЙ текст (можна прибрати або залишити) -->
+    <a-text value="Welcome to browser's VR!" position="-0.7 1.2 -1.7" color="black" align="left" width="4"></a-text>
+
+    <!-- НОВИЙ текст українською з кастомним шрифтом -->
+    <a-entity 
+      text="value: Кавецький Андрій, Ім-24; 
+            font: assets/fonts/Roboto_Regular.typeface.json; 
+            color: #0000FF; 
+            align: center; 
+            width: 6"
+      position="0 3 -5" 
+      scale="1 1 1">
+    </a-entity>
+
+  </a-scene>
+</body>
+</html>
